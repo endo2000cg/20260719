@@ -1,0 +1,33 @@
+/* 共通のスタイル */
+body {
+  font-family: sans-serif;
+  text-align: center;
+  padding: 50px;
+  transition: all 0.5s ease; /* 切り替え時のアニメーション */
+}
+
+a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+a:hover {
+  background-color: #555;
+}
+
+/* index.html（1ページ目）専用の色どり */
+#page1 {
+  background-color: #e3faf2; /* 明るいミントグリーン */
+  color: #0ca678;
+}
+
+/* index_2.html（2ページ目）専用の色どり */
+#page2 {
+  background-color: #fff0f6; /* 優しいピンク */
+  color: #d6336c;
+}
