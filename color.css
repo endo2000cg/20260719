@@ -16,14 +16,26 @@ a {
   border-radius: 5px;
 }
 
-/* 画像のサイズを小さくする設定 */
+/* 画像のサイズとアニメーションの設定 */
 img {
-  max-width: 30px;  /* 画像の横幅を最大300ピクセルにする（お好みの数字に変えてOK） */
-  width: 10%;       /* スマホなどの画面が狭いときは画面幅に合わせて縮小する */
-  height: auto;      /* 縦横比（比率）を崩さずに綺麗に縮小する */
-  margin: 20px auto; /* 上下に隙間を作り、中央に配置する */
-  display: block;    /* 中央配置するために必要な設定 */
-  border-radius: 8px;/* 補足：画像の角を少し丸くして柔らかい印象にします（不要なら消してOK） */
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  
+  /* 👇 ここからアニメーションの設定を追加 */
+  position: relative;        /* 動きの基準を作る */
+  animation: flowSky 10s linear infinite; /* 「flowSky」というアニメーションを10秒かけて等速で無限に繰り返す */
+}
+
+/* 👇 横に流れる動きのルール（キーフレーム） */
+@keyframes flowSky {
+  0% {
+    transform: translateX(100vw); /* 画面の右側の外に配置 */
+  }
+  100% {
+    transform: translateX(-100%); /* 画面の左側の外まで移動 */
+  }
 }
 
 a:hover {
